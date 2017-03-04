@@ -64,7 +64,7 @@ end
 terrortown_settings.processModules()
 
 xgui.hookEvent( "onProcessModules", nil, terrortown_settings.processModules )
-xgui.addModule( "TTT", terrortown_settings, "icon16/ttt.png", "xgui_gmsettings" )
+xgui.addModule( "TTT", terrortown_settings, "icon16/wrench_orange.png", "xgui_gmsettings" )
 
 --------------------Round structure Module--------------------
 local rspnl = xlib.makelistlayout{ w=415, h=318, parent=xgui.null }
