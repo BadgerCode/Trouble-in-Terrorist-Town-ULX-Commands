@@ -105,8 +105,8 @@ function ulx.slaynr( calling_ply, target_ply, num_slay, should_slaynr )
 	
 		if ulx.getExclusive( target_ply, calling_ply ) then
 			ULib.tsayError( calling_ply, ulx.getExclusive( target_ply, calling_ply ), true )
-		elseif num_slay < 0 then
-			ULib.tsayError( calling_ply, "Invalid integer:\"" .. num_slay .. "\" specified.", true )
+		elseif num_slay <= 0 then
+			ULib.tsayError( calling_ply, "Invalid integer:\"" .. num_slay .. "\" specified. Use rslaynr to remove slays", true )
 		else
 			current_slay = tonumber(target_ply:GetPData("slaynr_slays")) or 0
 			if not should_slaynr then 	
